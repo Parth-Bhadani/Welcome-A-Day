@@ -1,0 +1,546 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+:root {
+
+    --black: black;
+    --white: white;
+    --gray: rgba(25, 25, 25, 0.95);
+    --dark: #191919;
+    --danger: red;
+
+}
+
+ul,
+ol,
+p {
+    padding: 0px;
+    margin: 0px;
+}
+
+
+/* ==================================== GENERAL START ====================================  */
+html {
+    scroll-behavior: smooth;
+
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+.position-sticky {
+    position: sticky;
+    top: 0px;
+    z-index: 999;
+}
+
+/* ==================================== GENERAL END   ====================================  */
+
+
+
+/*  ==================================== HEADER START ====================================  */
+.open-sans {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.ralway-sans {
+    font-family: 'Raleway', sans-serif;
+}
+
+.poppins-sans {
+    font-family: 'Poppins', sans-serif;
+}
+
+.mail {
+    font-size: 15px;
+    transition-duration: 500ms;
+}
+
+.day {
+    line-height: 70px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.mail:hover {
+    color: var(--white) !important;
+}
+
+.sm-1 {
+    transition-duration: 500ms;
+
+}
+
+.sm-1:hover {
+    color: var(--white) !important;
+}
+
+.bg-gray {
+    background-color: var(--gray) !important;
+}
+
+.bg-dark1 {
+    background-color: #191919 !important;
+}
+
+.menulink>li>a {
+    line-height: 70px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: var(--white);
+    padding: 0px 15px;
+}
+
+.menulink>li {
+    margin: 0px 2px;
+}
+
+.menulink>li>a {
+    transition: 500ms;
+
+}
+
+.checked {
+    background-color: var(--danger);
+}
+
+.menulink>li>a:hover {
+    background-color: var(--danger);
+    color: var(--gray) !important;
+}
+
+.dropdown1 {
+    width: 200px;
+    left: 0px;
+    background-color: var(--white);
+    transform: translate(0px, 30px);
+    visibility: hidden;
+    transition: 400ms;
+    opacity: 0;
+}
+
+.dropdown:hover .dropdown1 {
+    visibility: visible;
+    transform: translate(0px, 0px);
+    opacity: 1;
+
+}
+
+.dropdown1>li>a {
+    color: black;
+    line-height: 35px;
+    padding: 0px 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+
+}
+
+.dropdown1>li>a:hover {
+    background-color: var(--danger);
+    color: white;
+}
+
+.deepdropdown1 {
+    left: 100%;
+    width: 200px;
+    background-color: var(--white);
+    transform: translate(-30px, 0px);
+    visibility: hidden;
+    transition: 400ms;
+    opacity: 0;
+}
+
+.deepdropdown:hover .deepdropdown1 {
+    visibility: visible;
+    transform: translate(0px, 0px);
+    opacity: 1;
+}
+
+.deepdropdown1>li>a {
+    color: black;
+    line-height: 35px;
+    padding: 0px 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
+.deepdropdown1>li>a:hover {
+    background-color: var(--danger);
+    color: white;
+}
+
+.menubar {
+    display: none;
+}
+
+.menubar a {
+    color: var(--white);
+    font-size: 30px;
+}
+
+@media screen and (max-width:1720px) {
+    .deepdropdown1 {
+        transform: translate(16px, 0px);
+        right: 100%;
+        left: auto;
+        top: 0px;
+    }
+}
+
+@media screen and (max-width:992px) {
+
+    .menubar {
+        display: block;
+    }
+
+    .menudiv {
+        position: absolute;
+        display: none;
+        z-index: 999;
+    }
+
+    .navlink:hover .menudiv {
+        display: block;
+    }
+
+    .menulink {
+        flex-direction: column;
+        width: 100%;
+        align-items: normal !important;
+        background-color: var(--white);
+    }
+
+    .menudiv {
+        width: 100%;
+        top: 100%;
+        background-color: var(--white);
+    }
+
+    .menulink li a {
+        color: black;
+        line-height: 35px;
+        width: 100%;
+    }
+
+    .checked {
+        background-color: transparent !important;
+    }
+
+    .dropdown1 {
+        display: none !important;
+        width: 100%;
+    }
+
+    .dropdown:hover .dropdown1 {
+        display: block !important;
+        position: static !important;
+
+    }
+
+    .deepdropdown1 {
+        display: none !important;
+        margin: auto;
+        width: 95%;
+    }
+
+    .deepdropdown:hover .deepdropdown1 {
+        display: block !important;
+        position: static !important;
+
+    }
+}
+
+/*  ==================================== HEADER END ====================================  */
+
+/*  ==================================== WELCOME TO DAY START ====================================  */
+.bgimage {
+    background-image: url(../images/hero-bg.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: calc(100vh - 110px);
+    background-size: cover;
+}
+
+.bgcolor {
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+}
+
+.welcometoday {
+    font-weight: 700;
+}
+
+.getstarted:hover {
+    background-color: #cc1616 !important;
+    border-color: #cc1616 !important;
+    transition-duration: 0.5s;
+}
+
+
+/*  ==================================== WELCOME TO DAY END ====================================  */
+
+/* ==================================== SECTION2 START ====================================  */
+
+
+/*  ==================================== SECTION2 END ====================================  */
+
+/*  ==================================== SECTION3 START ====================================  */
+
+
+.paragraph1 {
+    color: #aaaaaa;
+}
+
+.transitioneffect {
+    transition-duration: 500ms;
+    display: inline-block;
+}
+
+.transitioneffect:hover {
+    background-color: red;
+}
+
+.transitioneffect:hover p {
+    color: white !important;
+}
+
+.transformtrans {
+    transition: 0.5s;
+}
+
+.transitioneffect:hover .transformtrans {
+    transform: translate(0px, -20px);
+}
+
+.fs-7 {
+    font-size: 15px;
+}
+
+
+
+/*  ==================================== SECTION3 END ====================================  */
+
+/*  ==================================== SECTION4 START ====================================  */
+.grayscaleimage {
+    filter: grayscale(100);
+    transition: 0.5s;
+}
+
+.grayscaleimage:hover {
+    filter: none;
+    transform: scale(1.2);
+}
+
+/*  ==================================== SECTION4 END ====================================  */
+
+
+/*  ==================================== SECTION5 START ====================================  */
+.shadow-ss {
+    color: rgba(59, 52, 52, 0.103);
+    font-size: 52px;
+    font-weight: 700;
+    top: 0px;
+    left: 0;
+    right: 0;
+}
+
+.basketballdiv {
+    height: 64px;
+    width: 64px;
+    transition-duration: 500ms;
+}
+
+.basketball {
+    background: #cc1616;
+    line-height: 64px;
+    transform: translate(7px, 7px);
+    transition-duration: 500ms;
+}
+
+.paddingdiv1 {
+    padding: 80px 20px;
+    transition-duration: 500ms;
+}
+
+.paddingdiv1:hover {
+    background: #cc1616;
+    border-color: #cc1616;
+}
+
+.paddingdiv1:hover .basketball {
+    background-color: var(--white);
+    color: #cc1616 !important;
+}
+
+.paddingdiv1:hover .basketballdiv {
+    background: #e82d2d !important;
+}
+
+.transformdiv {
+    transition-duration: 500ms;
+}
+
+.transformdiv {
+    font-size: 14px;
+}
+
+.paddingdiv1:hover .transformdiv {
+    transform: translate(0px, -20px);
+}
+
+.paddingdiv1:hover a {
+    color: var(--white);
+}
+
+.paddingdiv1:hover p {
+    color: var(--white);
+}
+
+@media screen and (max-width:992px) {
+    .paddingdiv1 {
+        padding: 35px 20px;
+    }
+}
+
+
+/*  ==================================== SECTION5 END ====================================  */
+
+
+/* ==================================== CALL TO ACTION START =================================== */
+.bgimage2 {
+    background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)), url(../images/cta-bg.jpg) fixed center center;
+    background-size: cover;
+    padding: 120px 0;
+}
+
+.calltoaction:hover {
+    background-color: red;
+    border-color: red !important;
+    transition-duration: 500ms;
+}
+
+@media screen and (max-width:992px) {
+    .bgimage2 {
+        padding: 40px 0;
+    }
+}
+
+/* ==================================== CALL TO ACTION END =================================== */
+
+/*  ==================================== PORTFOLIO  START ==================================== */
+.checked1 {
+    color: #e82d2d !important;
+}
+
+.sphover:hover {
+    color: #e82d2d !important;
+    transition-duration: 0.5s;
+}
+
+
+/*  ==================================== PORTFOLIO  END ==================================== */
+
+/*  ==================================== PRICING  END ==================================== */
+
+
+.dollor {
+    top: 10px;
+    right: 100%;
+}
+
+.fs-14 {
+    font-size: 14px;
+}
+
+.bg-red {
+    background-color: red;
+}
+
+.buynowhover:hover {
+    background-color: white !important;
+    color: red !important;
+    transition: 0.5s;
+}
+
+/*  ==================================== PRICING  END ==================================== */
+
+/*  ==================================== TEAM START ====================================  */
+
+.fs-13 {
+    font-size: 13px;
+}
+
+.smdiv2 a:hover {
+    color: red !important;
+    transition-duration: .5s;
+}
+
+/*    ==================================== TEAM END ==================================== */
+/*  ==================================== CONTACT START ==================================== */
+.location {
+    height: 52px;
+    width: 52px;
+    border-style: dotted;
+    line-height: 48px;
+}
+
+@media screen and (max-width:992px) {
+    .map {
+        height: 395px !important;
+    }
+}
+
+/*  ==================================== CONTACT END ==================================== */
+/*  ==================================== FOOTER START ==================================== */
+
+.bgcolorfooter {
+    background: #0c0c0c;
+}
+
+.smlist li a {
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+}
+
+.smlist li {
+    background: #262626;
+}
+
+.smlist li:hover {
+    background-color: red;
+    transition-duration: .5s;
+}
+
+.subscribe {
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: red;
+
+}
+
+/*  ==================================== FOOTER END ==================================== */
+
+.height40px {
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    bottom: 6%;
+    right: 3%;
+
+    }
